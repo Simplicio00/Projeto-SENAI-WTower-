@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "4a6397cf-6f68-4869-b488-baae78994ab4",
+		"name": "Projeto WTower",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Cadastro de usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Lucas Simplício de Oliveira",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lucas.ayped@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "apelido",
+									"value": "lucasszlom",
+									"type": "text"
+								},
+								{
+									"key": "foto",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "senha",
+									"value": "abc12345",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rota}}/usuario/cadastrar",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"usuario",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Info\":\"lucasszlom\",\r\n    \"Senha\":\"abc12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rota}}/login",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar informações logado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzLmF5cGVkQGdtYWlsLmNvbSIsImp0aSI6IjYiLCJleHAiOjE1OTMxNDA5NDksImlzcyI6IldUb3dlci5XZWJBcGkiLCJhdWQiOiJXVG93ZXIuV2ViQXBpIn0.gMTSZfm5vTqvK5eUqreV3CNT45IfqS9cDjFCLNrCQJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/usuario",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar usuário",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzLmF5cGVkQGdtYWlsLmNvbSIsImp0aSI6IjYiLCJleHAiOjE1OTMxNDA5NDksImlzcyI6IldUb3dlci5XZWJBcGkiLCJhdWQiOiJXVG93ZXIuV2ViQXBpIn0.gMTSZfm5vTqvK5eUqreV3CNT45IfqS9cDjFCLNrCQJ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Lucas Szlom\",\r\n    \"senha\":\"abc123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{rota}}/usuario",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Selecoes",
+			"item": [
+				{
+					"name": "Listar todas as seleções",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzLmF5cGVkQGdtYWlsLmNvbSIsImp0aSI6IjYiLCJleHAiOjE1OTMxMDQwNzAsImlzcyI6IldUb3dlci5XZWJBcGkiLCJhdWQiOiJXVG93ZXIuV2ViQXBpIn0.xiBcdBnv8IM7R_WyEmGaMCtvb4gQUFTLQlYTB2E4LTE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/selecoes",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"selecoes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Jogador",
+			"item": [
+				{
+					"name": "Listar por nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/jogadores/all",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"jogadores",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listagem de jogadores por seleção",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/jogadores/selecao/all",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"jogadores",
+								"selecao",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Partidas",
+			"item": [
+				{
+					"name": "Listar todos os jogos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/partidas",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"partidas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar jogo por estádio/equipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/partidas/pesquisa/arena",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"partidas",
+								"pesquisa",
+								"arena"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar partida por data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{rota}}/Partidas/11-07-2020",
+							"host": [
+								"{{rota}}"
+							],
+							"path": [
+								"Partidas",
+								"11-07-2020"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

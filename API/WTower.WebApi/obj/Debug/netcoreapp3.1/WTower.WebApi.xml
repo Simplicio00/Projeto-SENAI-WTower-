@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WTower.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WTower.WebApi.Controllers.JogadoresController.ListarPorNome(System.String)">
+            <summary>
+            Listagem por nome. O parâmetro padrão é "all" para listar todos os jogadores por ordem de número da camisa e posição. 
+            Caso queira procurar pelo nome, coloque o parâmetro como o nome do jogador buscado
+            </summary>
+            <param name="nome">Parâmetro que pode ser o nome do jogador buscado, ou listagem geral se colocada como "all"</param>
+            <returns>Retorna uma lista com os jogadores requisitados</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.JogadoresController.ListaPorSelecao(System.String)">
+            <summary>
+            Listagem de jogadores que pertencem somente á uma seleção específica. 
+             Ou se preferível generalizada por ordem alfabética de seleções o parâmetro padrão é "all" .
+            </summary>
+            <param name="nome">Parâmetro que pode ser o nome da seleção, ou listagem geral de jogadores das seleções por ordem alfabética se colocada como "all"</param>
+            <returns>Retorna uma lista com os jogadores requisitados</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.LoginController.Login(WTower.WebApi.Domains.ViewModel.LogonViewModel)">
+            <summary>
+            Faz a autenticação do usuário no sistema, exigindo o campo senha (Senha) e info (E-Mail ou Apelido) para serem preenchidos.
+            </summary>
+            <param name="login">Armazena as credenciais para a autenticação do usuário</param>
+            <returns>Retorna um token de autenticação</returns>
+            
+        </member>
+        <member name="M:WTower.WebApi.Controllers.PartidasController.OrdPartidaPorData">
+            <summary>
+            Ordenando todas as partidas existentes por data 
+            </summary>
+            <returns>Lista com todas as partidas com suas datas</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.PartidasController.OrdenarPorDataExata(System.String)">
+            <summary>
+            Ordenando partidas por uma data específica 
+            </summary>
+            <param name="data">Data específica para ser filtrada</param>
+            <example> Dia, mês e ano --- dd-mm-aaaa </example>
+            <returns>Retorna todas as partidas da data selecionada</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.PartidasController.BuscarPorEstadioOrSelecao(System.String)">
+            <summary>
+            Faz a pesquisa das partidas pelo nome do estádio ou seleção
+            </summary>
+            <param name="parametro">Nome do estadio ou seleção para a busca</param>
+            <returns>Retorna uma lista com as partidas do qual o parâmetro está presente</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.SelecoesController.Get">
+            <summary>
+            Faz a listagem de todas as seleções 
+            </summary>
+            <returns>Retorna uma lista com as seleções participantes</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.UsuarioController.Get">
+            <summary>
+            Consulta as informações do usuário logado
+            </summary>
+            <returns>Retorna as informações do usuário logado</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.UsuarioController.Cadastro(WTower.WebApi.Domains.Usuario)">
+            <summary>
+            Cadastro de usuário por formulário.
+            O Cadastro será feito pelo Form-data, requerindo a inserção de um arquivo de imagem para o campo "foto"
+            </summary>
+            <param name="usuario">Objeto usuário a ser cadastrado</param>
+            <returns>Retorna a confirmação do cadastro</returns>
+        </member>
+        <member name="M:WTower.WebApi.Controllers.UsuarioController.AtualizarUsr(WTower.WebApi.Domains.ViewModel.UpdateUserViewModel)">
+            <summary>
+            	Atualização das informações do usuário (é necessário estar logado para realizar alterações).
+            	É possível alterar Nome, E-Mail, Senha e Apelido, sendo um atributo por vez ou vários duma vez.
+            </summary>
+            <param name="usuario">Representa o objeto dos campos sujeitos á alteração</param>
+            <returns>Retorna uma confirmação de que a alteração foi bem sucedida para o usuário</returns>
+        </member>
+    </members>
+</doc>
