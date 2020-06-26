@@ -6017,11 +6017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto\\API\\WTower.WebApi\\WTower.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto-SENAI-WTower-\\API\\WTower.WebApi\\WTower.WebApi.csproj",
       "projectName": "WTower.WebApi",
-      "projectPath": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto\\API\\WTower.WebApi\\WTower.WebApi.csproj",
+      "projectPath": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto-SENAI-WTower-\\API\\WTower.WebApi\\WTower.WebApi.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto\\API\\WTower.WebApi\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto-SENAI-WTower-\\API\\WTower.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

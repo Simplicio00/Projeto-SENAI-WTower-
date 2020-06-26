@@ -24,19 +24,14 @@ namespace WTower.WebApi.Controllers
 		/// <summary>
 		/// Ordenando partidas por uma data específica 
 		/// </summary>
-		/// <param name="data">Data específica para ser filtrada</param>
+		/// <param name="parametro">Data específica para ser filtrada</param>
 		/// <example> Dia, mês e ano --- dd-mm-aaaa </example>
 		/// <returns>Retorna todas as partidas da data selecionada</returns>
-		[HttpGet("{data}")]
-		public async Task<IActionResult> OrdenarPorDataExata(string data)
+		[HttpGet("{parametro}")]
+		public async Task<IActionResult> OrdenarPorDataExata(string parametro)
 		{
-			DateTime dt = DateTime.Parse(data);
-
-			var valido = await _dbpartida.OrdDataPartidasExato(dt);
-
-			if (valido != null) return Ok(valido);
-
-			return NotFound(new { msg = "Data inválida" });
+			DateTime date = DateTime.Parse(parametro);
+			return Ok(await _dbpartida.OrdDataPartidasExato(date));
 		}
 
 		/// <summary>
