@@ -9,7 +9,7 @@
             Listagem por nome. O parâmetro padrão é "all" para listar todos os jogadores por ordem de número da camisa e posição. 
             Caso queira procurar pelo nome, coloque o parâmetro como o nome do jogador buscado
             </summary>
-            <param name="parametro">Parâmetro que pode ser o nome do jogador buscado, ou listagem geral se colocada como "all"</param>
+            <param name="nome">Parâmetro que pode ser o nome do jogador buscado, ou listagem geral se colocada como "all"</param>
             <returns>Retorna uma lista com os jogadores requisitados</returns>
         </member>
         <member name="M:WTower.WebApi.Controllers.JogadoresController.ListaPorSelecao(System.String)">
@@ -17,7 +17,7 @@
             Listagem de jogadores que pertencem somente á uma seleção específica. 
              Ou se preferível generalizada por ordem alfabética de seleções o parâmetro padrão é "all" .
             </summary>
-            <param name="param">Parâmetro que pode ser o nome da seleção, ou listagem geral de jogadores das seleções por ordem alfabética se colocada como "all"</param>
+            <param name="nome">Parâmetro que pode ser o nome da seleção, ou listagem geral de jogadores das seleções por ordem alfabética se colocada como "all"</param>
             <returns>Retorna uma lista com os jogadores requisitados</returns>
         </member>
         <member name="M:WTower.WebApi.Controllers.LoginController.Login(WTower.WebApi.Domains.ViewModel.LogonViewModel)">
@@ -38,7 +38,7 @@
             <summary>
             Ordenando partidas por uma data específica 
             </summary>
-            <param name="parametro">Data específica para ser filtrada</param>
+            <param name="data">Data específica para ser filtrada</param>
             <example> Dia, mês e ano --- dd-mm-aaaa </example>
             <returns>Retorna todas as partidas da data selecionada</returns>
         </member>

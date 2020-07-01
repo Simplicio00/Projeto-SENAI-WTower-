@@ -23,11 +23,9 @@ namespace WTower.WebApi.Repositories
 
 		public async Task<List<Jogo>> OrdEstadioOrdSelecao(string param) =>
 			await dbcontext.Jogo.AsQueryable().
-			Where(a => a.SelecaoCasaNavigation.Nome.Contains(param) || 
-			a.SelecaoVisitanteNavigation.Nome.Contains(param) ||
-			a.Estadio.Contains(param))
-			.Include(a => a.SelecaoCasaNavigation)
-			.Include(a => a.SelecaoVisitanteNavigation).ToListAsync();
+			Where(a => WebApiBDContext.SoundsLike(a.Estadio) == WebApiBDContext.SoundsLike(param) ||
+				WebApiBDContext.SoundsLike(a.SelecaoCasaNavigation.Nome) == WebApiBDContext.SoundsLike(param)
+				).Include(a => a.SelecaoCasaNavigation).Include(a => a.SelecaoVisitanteNavigation).ToListAsync();
 		
 	}
 }

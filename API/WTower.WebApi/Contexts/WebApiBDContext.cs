@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Data.SqlClient.Server;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using WTower.WebApi.Domains;
 
 namespace WTower.WebApi.Contexts
@@ -30,7 +31,7 @@ namespace WTower.WebApi.Contexts
 
 
 
-        [DbFunction(Name ="soundex",Schema ="")]
+        [DbFunction(Name ="SOUNDEX")]
         public static string SoundsLike(string search) => throw new NotImplementedException();
 
 
@@ -155,10 +156,11 @@ namespace WTower.WebApi.Contexts
             });
 
             OnModelCreatingPartial(modelBuilder);
+            modelBuilder.HasDbFunction(typeof(WebApiBDContext).GetMethod(nameof(SoundsLike)))
+            .HasTranslation(args => SqlFunctionExpression.Create("SOUNDEX", args, typeof(string), null));
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
 
     }
 }

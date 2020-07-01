@@ -81,16 +81,7 @@ namespace WTower.WebApi.Controllers
 		[HttpPut]
 		public async Task<IActionResult> AtualizarUsr(UpdateUserViewModel usuario)
 		{
-			var usr = Convert.ToInt32(
-				HttpContext.User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-
-			if ( _dbuser.Get().Result.Exists(a => a.Email == usuario.Email))
-				return StatusCode(403, new { msgerr = "Este E-Mail já está cadastrado" });
-
-			if (_dbuser.Get().Result.Exists(a => a.Apelido == usuario.Apelido))
-				return StatusCode(403, new { msgerr = "Este Apelido já está cadastrado" });
-
-
+			var usr = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
 			await _dbuser.Update(usuario, usr);
 
 			return StatusCode(200, new { msgsucess = "Atualização completada com sucesso" });
