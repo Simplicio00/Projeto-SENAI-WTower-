@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "GB85FrCGlBm3Rg0emagBZImAU4QazRMGPEBIqEdDXeVMgafXk9p064uicwR1qTWjppo095+lEbbjk1ONp5Rrjw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Acer\\Desktop\\soluc externas\\1S2020-T2-Xamarin-master\\Campeonato_App\\Campeonato_App\\Campeonato_App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

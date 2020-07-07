@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Campeonato_App.Views.PrincipalView">
+    <ContentPage.Content>
+        <StackLayout Margin="20,35,20,25" >
+
+                <Image Source="app_logo.png" HorizontalOptions="Center" WidthRequest="250"/>
+
+            
+                <Label Text="Campeonato de Seleções 2020"
+                   TextColor="Gray"
+                   HorizontalOptions="Center" 
+                   FontSize="16"/>
+            
+                <StackLayout VerticalOptions="EndAndExpand">
+                
+                <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
+                    <Label Text="Realização"
+                       TextColor="Gray"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="StartAndExpand"
+               
+                       FontAttributes="Bold"
+                       FontSize="16"/>
+
+                    <Label Text="Apoio"
+                       TextColor="Gray"
+                       HorizontalOptions="End"
+                       FontAttributes="Bold"
+                       FontSize="16"/>
+                    
+                </StackLayout>
+                
+                <Frame>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="fifa_logo.png"  HorizontalOptions="StartAndExpand" WidthRequest="100" />
+                        <Image  Source="WS_Towers.png" HorizontalOptions="EndAndExpand" WidthRequest="100" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
