@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JoEycyEMLIczHBEA3wiMxz2CVWmAnzx1Cxy6i+yv7Fqgd3zkAItcIuRlgVf1Dp6+vSjhIkMftJyBGkuTDOnZXQ==",
+  "dgSpecHash": "YdkKwGTVWGlupCyfj7CjgifrLeFJvSanpY1z1/VrIG+YQMMCUYolVzK84Ycs6kjaZ/juFgc+0uVvrWfxopvQSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto\\API\\WTower.WebApi\\WTower.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\Documents\\SENAI\\Técnico em Desenvolvimento\\Projeto-SENAI-WTower-\\API\\WTower.WebApi\\WTower.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.5\\microsoft.aspnetcore.authentication.jwtbearer.3.1.5.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",

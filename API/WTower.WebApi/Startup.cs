@@ -43,6 +43,8 @@ namespace WTower.WebApi
 			})
 			.AddJwtBearer("JwtBearer", op =>
 			{
+				op.RequireHttpsMetadata = false;
+				op.SaveToken = true;
 				op.TokenValidationParameters = new TokenValidationParameters
 				{
 					ValidateIssuer = true,
@@ -70,6 +72,7 @@ namespace WTower.WebApi
 			app.UseAuthentication();
 			app.UseRouting();
 			app.UseAuthorization();
+
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();

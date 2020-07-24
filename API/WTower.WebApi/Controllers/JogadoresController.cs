@@ -27,7 +27,7 @@ namespace WTower.WebApi.Controllers
 		/// Listagem de jogadores que pertencem somente á uma seleção específica. 
 		///  Ou se preferível generalizada por ordem alfabética de seleções o parâmetro padrão é "all" .
 		/// </summary>
-		/// <param name="nome">Parâmetro que pode ser o nome da seleção, ou listagem geral de jogadores das seleções por ordem alfabética se colocada como "all"</param>
+		/// <param name="selecao">Parâmetro que pode ser o nome da seleção, ou listagem geral de jogadores das seleções por ordem alfabética se colocada como "all"</param>
 		/// <returns>Retorna uma lista com os jogadores requisitados</returns>
 		[HttpGet("selecao/{selecao}")]
 		public async Task<IActionResult> ListaPorSelecao(string selecao) => Ok(await dbjogador.ListaJogPorSelecao(selecao));
