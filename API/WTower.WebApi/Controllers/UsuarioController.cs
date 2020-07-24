@@ -40,26 +40,26 @@ namespace WTower.WebApi.Controllers
 		/// <returns>Retorna a confirmação do cadastro</returns>
 		[AllowAnonymous]
 		[HttpPost("Cadastrar")]
-		public async Task<IActionResult> Cadastro([FromForm] Usuario usuario)
+		public async Task<IActionResult> Cadastro(/*[FromForm]*/ Usuario usuario)
 		{
 			var lista = await _dbuser.Get();
 
-			usuario.Email = Request.Form["email"].ToString();
-			usuario.Nome = Request.Form["nome"].ToString();
-			usuario.Apelido = Request.Form["apelido"].ToString();
-			usuario.Senha = Request.Form["senha"].ToString();
+			//usuario.Email = Request.Form["email"].ToString();
+			//usuario.Nome = Request.Form["nome"].ToString();
+			//usuario.Apelido = Request.Form["apelido"].ToString();
+			//usuario.Senha = Request.Form["senha"].ToString();
 
-			if (Request.Form.Files["foto"] == null) 
-				return BadRequest(new { msgerr = "Insira uma imagem" });
+			//if (Request.Form.Files["foto"] == null) 
+			//	return BadRequest(new { msgerr = "Insira uma imagem" });
 			
-			using (var stream = new MemoryStream())
-			{
-				var foto = Request.Form.Files["foto"].CopyToAsync(stream);
-				usuario.Foto = stream.ToArray();
-			}
+			//using (var stream = new MemoryStream())
+			//{
+			//	var foto = Request.Form.Files["foto"].CopyToAsync(stream);
+			//	usuario.Foto = stream.ToArray();
+			//}
 
-			if (usuario.Foto.Length > 1000000) 
-				return BadRequest(new { msgerr = "Imagem demasiadamente grande" });
+			//if (usuario.Foto.Length > 1000000) 
+			//	return BadRequest(new { msgerr = "Imagem demasiadamente grande" });
 
 
 			if (!lista.Exists(a => a.Email == usuario.Email) && !lista.Exists(a => a.Apelido == usuario.Apelido))
