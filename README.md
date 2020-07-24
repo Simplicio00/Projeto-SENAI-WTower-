@@ -1,2 +1,2 @@
 # Projeto-SENAI-WTower-
-Repositório direcionado para organização do projeto WTower.
+Repositório direcionado para a organização do projeto WTower.
