@@ -32,11 +32,15 @@ namespace WTower.WebApi.Controllers
 		{
 			DateTime dt = DateTime.Parse(data);
 
-			var valido = await _dbpartida.OrdDataPartidasExato(dt);
+			//var valido = await _dbpartida.OrdDataPartidasExato(dt);
 
-			if (valido != null) return Ok(valido);
+			//if (valido != null) return Ok(valido);
 
-			return NotFound(new { msg = "Data inválida" });
+			//return NotFound(new { msg = "Data inválida" });
+
+			return Ok(await _dbpartida.OrdDataPartidasExato(dt));
+
+
 		}
 
 		/// <summary>

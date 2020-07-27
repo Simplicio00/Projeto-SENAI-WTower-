@@ -17,14 +17,17 @@ namespace WTower.WebApi.Repositories
 				.Include(a => a.SelecaoCasaNavigation)
 				.Include(a => a.SelecaoVisitanteNavigation).ToListAsync();
 
-		public async Task<List<Jogo>> OrdDataPartidasExato(DateTime data) => 
-			await dbcontext.Jogo.Where(a => a.Data.Value.Date == data.Date).ToListAsync();
-		
+		public async Task<List<Jogo>> OrdDataPartidasExato(DateTime data) =>
+			await dbcontext.Jogo.Where(a => a.Data.Value.Date == data.Date)
+			.Include(a => a.SelecaoCasaNavigation).Include(a => a.SelecaoVisitanteNavigation).ToListAsync();
+
+
 
 		public async Task<List<Jogo>> OrdEstadioOrdSelecao(string param) =>
 			await dbcontext.Jogo.AsQueryable().
 			Where(a => WebApiBDContext.SoundsLike(a.Estadio) == WebApiBDContext.SoundsLike(param) ||
-				WebApiBDContext.SoundsLike(a.SelecaoCasaNavigation.Nome) == WebApiBDContext.SoundsLike(param)
+				WebApiBDContext.SoundsLike(a.SelecaoCasaNavigation.Nome) == WebApiBDContext.SoundsLike(param) ||
+				WebApiBDContext.SoundsLike(a.SelecaoVisitanteNavigation.Nome) == WebApiBDContext.SoundsLike(param)
 				).Include(a => a.SelecaoCasaNavigation).Include(a => a.SelecaoVisitanteNavigation).ToListAsync();
 		
 	}
