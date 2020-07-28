@@ -31,7 +31,6 @@ namespace WTower.WebApi.Controllers
 				HttpContext.User.Claims.FirstOrDefault(c => c.Type == JwtRegisteredClaimNames.Jti).Value)));
 
 
-
 		/// <summary>
 		/// Cadastro de usuário por formulário.
 		/// O Cadastro será feito pelo Form-data, requerindo a inserção de um arquivo de imagem para o campo "foto"
