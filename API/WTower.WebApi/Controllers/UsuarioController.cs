@@ -39,14 +39,14 @@ namespace WTower.WebApi.Controllers
 		/// <returns>Retorna a confirmação do cadastro</returns>
 		[AllowAnonymous]
 		[HttpPost("Cadastrar")]
-		public async Task<IActionResult> Cadastro(/*[FromForm]*/ Usuario usuario)
+		public async Task<IActionResult> Cadastro([FromForm] Usuario usuario)
 		{
 			var lista = await _dbuser.Get();
 
-			//usuario.Email = Request.Form["email"].ToString();
-			//usuario.Nome = Request.Form["nome"].ToString();
-			//usuario.Apelido = Request.Form["apelido"].ToString();
-			//usuario.Senha = Request.Form["senha"].ToString();
+			usuario.Email = Request.Form["email"].ToString();
+			usuario.Nome = Request.Form["nome"].ToString();
+			usuario.Apelido = Request.Form["apelido"].ToString();
+			usuario.Senha = Request.Form["senha"].ToString();
 
 			//if (Request.Form.Files["foto"] == null) 
 			//	return BadRequest(new { msgerr = "Insira uma imagem" });
